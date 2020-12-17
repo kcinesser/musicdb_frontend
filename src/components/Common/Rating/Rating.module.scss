@@ -1,0 +1,15 @@
+.star_rating {
+  display: inline-block;
+
+  .star_rating__star {
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8);
+    background-clip: text;
+    background-color: #9f9f9f;
+    display: inline-block !important;
+
+    &.is_selected {
+      color: #1eeaa9;
+    }
+  }
+}

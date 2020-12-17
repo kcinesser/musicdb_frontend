@@ -1,0 +1,118 @@
+.register {
+  background-image: url("https://musicdbassets.s3.us-east-2.amazonaws.com/assets/register-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(15, 15, 15, 0.55);
+    z-index: 1;
+  }
+
+  div,
+  p {
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0px;
+  }
+
+  .register__header {
+    padding: 2rem;
+    position: absolute;
+  }
+
+  .register__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+
+    .register__form {
+      color: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      text-align: center;
+      width: 25%;
+
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      form {
+        label,
+        input {
+          display: block;
+          margin-bottom: 1rem;
+        }
+
+        label {
+          text-transform: uppercase;
+        }
+
+        input,
+        button {
+          width: 100%;
+          border-radius: 8px;
+          padding: 0.5rem 1rem;
+
+          &:focus {
+            appearance: none;
+          }
+        }
+
+        input {
+          border-width: 0px;
+        }
+
+        button {
+          background: #1eeaa9;
+          text-transform: uppercase;
+          border: 2px solid #1eeaa9;
+          font-weight: 900;
+          color: #fff;
+          transition: all 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .btn {
+        color: #fff;
+        font-weight: 900;
+        border: 2px solid #1eeaa9;
+        background: transparent;
+        width: 100%;
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+
+        &:hover {
+          background: #1eeaa9;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,411 @@
+.artist {
+  position: relative;
+  height: 100%;
+  display: flex;
+
+  span.background {
+    display: block;
+    position: absolute;
+    font-size: 200px;
+    font-weight: 900;
+    z-index: -1;
+    opacity: 0.1;
+    text-transform: uppercase;
+    text-align: right;
+    width: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(30, 234, 169, 0) 0%,
+        rgba(255, 255, 255, 1) 98%
+      );
+    }
+  }
+
+  .artist__hero {
+    width: 300px;
+
+    .artist__info {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+
+      p,
+      time {
+        font-size: 1.2rem;
+      }
+
+      i {
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin-right: 1rem;
+      }
+
+      a {
+        color: #1d1d1f;
+        display: block;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      time {
+        display: block;
+      }
+    }
+
+    .artist__image {
+      height: 300px;
+      width: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: flex-end;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(25, 25, 25, 0.45);
+        border-radius: 4px;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        line-height: 1.8rem;
+        letter-spacing: -1px;
+        line-height: 1.8rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin: 0 0 1rem 0;
+        position: relative;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .list__container {
+    width: 75%;
+
+    .list__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      width: 100%;
+      padding: 0 2rem;
+
+      h2 {
+        font-size: 1.4rem;
+        margin-right: 2rem;
+      }
+
+      .right {
+        margin-left: auto;
+      }
+
+      .alert__box {
+        display: flex;
+        align-items: center;
+
+        span {
+          background: #fff;
+          transition: all 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+        }
+
+        &.alert {
+          span {
+            margin-right: 1rem;
+            width: 0px;
+            overflow: hidden;
+            padding: 0px;
+          }
+
+          i {
+            color: #fff;
+          }
+
+          .alert__text {
+            width: 145px;
+            background: #fff;
+            opacity: 1;
+
+            i {
+              color: #1d1d1f;
+              cursor: pointer;
+              margin: 0 0.2rem;
+
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+
+            i.red {
+              color: #db162f;
+            }
+          }
+        }
+
+        .alert__text {
+          width: 0px;
+          padding: 0px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+          opacity: 0;
+          white-space: nowrap;
+        }
+      }
+
+      span {
+        padding: 0.6rem;
+        transition: transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99),
+          box-shadow 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+
+    .song__list {
+      width: 100%;
+      padding: 0 2rem;
+
+      > div:first-of-type {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+
+        .song__inner {
+          border-top-left-radius: 4px;
+        }
+
+        .song__controls {
+          border-top-right-radius: 4px;
+        }
+      }
+
+      > div:last-of-type {
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        .song__inner {
+          border-bottom-left-radius: 4px;
+        }
+
+        .song__controls {
+          border-bottom-right-radius: 4px;
+        }
+      }
+
+      .song__item {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        background-color: #1eeaa9;
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        // animation-name: animateIn;
+        // animation-duration: 250ms;
+        // animation-delay: calc(var(--animation-order) * 50ms);
+        // animation-fill-mode: both;
+        // animation-timing-function: cubic-bezier(0.05, 0.74, 0.27, 0.99);
+
+        &.alert {
+          background-color: #db162f;
+
+          .song__inner,
+          .song__controls {
+            border-bottom: 1px solid #db162f;
+          }
+
+          .song__controls {
+            width: 0px;
+          }
+
+          .delete__confirm {
+            width: 80px;
+          }
+        }
+
+        &:hover {
+          z-index: 3;
+
+          .song__inner {
+            background-color: #fafafa;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          }
+
+          .song__controls:before {
+            transform: translateX(-80px);
+          }
+        }
+
+        .song__inner {
+          padding: 0.8rem;
+          width: 100%;
+          background-color: #fff;
+          border-bottom: 1px solid #1eeaa9;
+          display: flex;
+          justify-content: space-between;
+
+          align-items: center;
+          box-shadow: none;
+
+          .song__title {
+            padding-right: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            a,
+            p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .song__title {
+            width: 25%;
+          }
+
+          .song__difficulty {
+            width: 20%;
+          }
+
+          .song__genre,
+          .song__instrument,
+          .song__tools,
+          .song__status {
+            width: 10%;
+            text-align: center;
+          }
+
+          .song__difficulty {
+            text-align: center;
+          }
+
+          .icon.icon__piano:before {
+            content: "";
+            background-image: url(../../../assets/icons/piano.svg);
+            background-size: cover;
+            margin: auto;
+            display: block;
+            height: 16px;
+            width: 16px;
+          }
+
+          .song__tools {
+            i {
+              margin: 0 0.4rem;
+            }
+          }
+
+          p,
+          a {
+            font-size: 0.8rem;
+          }
+
+          a {
+            font-weight: 600;
+            color: #1d1d1f;
+            transition: opacity 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+            text-decoration: none;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .song__controls {
+          width: 80px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          transition: all 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+          position: relative;
+          border-bottom: 1px solid #1eeaa9;
+
+          i {
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            z-index: 2;
+            transition: transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+          }
+        }
+
+        .delete__confirm {
+          width: 0px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          transition: all 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+          text-align: center;
+
+          i {
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes animateIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.6) translateY(300px);
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.loading__icon {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+  text-align: center;
+
+  i {
+    color: #1eeaa9;
+    font-size: 4rem;
+    animation: spin 2s linear infinite;
+    position: relative;
+    top: 300px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

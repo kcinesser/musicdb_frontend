@@ -1,0 +1,19 @@
+.sidetray {
+  position: fixed;
+  height: calc(100vh - 60px);
+  width: 250px;
+  top: 60px;
+  right: 0;
+  transform: translateX(250px);
+  transition: transform 0.4s cubic-bezier(0.05, 0.74, 0.27, 0.99);
+  z-index: 100;
+  padding: 1.4rem;
+  background-color: #fff;
+  border-top: 2px solid #1eeaa9;
+
+  &.active {
+    transform: translateX(0px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap");
+
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
+html {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+*,
+html,
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+
+*,
+body,
+p {
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root,
+.content {
+  height: 100%;
+}
